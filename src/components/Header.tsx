@@ -1,3 +1,6 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import {
   Sheet,
@@ -10,30 +13,73 @@ import Image from 'next/image';
 import { Button } from './ui/button';
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 left-0 right-0 z-50 flex items-center justify-between px-8 lg:px-24 py-2 bg-primary shadow-lg shadow-black/30">
-      <div className="flex items-center">
-        <Image
-          src="/LogoHeader.svg"
-          alt="Logo Lucas Abreu"
-          width={100}
-          height={100}
-        />
-        <h1 className="font-bold text-xl sm:text-2xl pl-4 text-softWhite">
+    <header
+      className={`sticky top-0 left-0 right-0 z-50 flex items-center justify-between px-8 lg:px-24 py-2 transition-transform duration-300 ${
+        isScrolled ? 'bg-primary' : 'bg-softWhite'
+      }`}
+    >
+      <div className="flex items-center gap-2 transition-transform duration-300 hover:scale-110">
+        <div>
+          <Image
+            src={`${isScrolled ? '/LogoHeader.svg' : '/LogoEscura.svg'}`}
+            alt="Logo Lucas Abreu"
+            width={100}
+            height={100}
+          />
+        </div>
+        <h1
+          className={`font-bold text-xl sm:text-2xl pl-4 ${
+            isScrolled ? 'text-softWhite' : 'text-primary'
+          }`}
+        >
           Lucas Abreu
         </h1>
       </div>
 
       {/* Navegação Desktop */}
-      <nav className="hidden md:flex space-x-4 lg:space-x-10 items-center">
-        <Link href="#" className="text-softWhite hover:text-secondary">
+      <nav className="hidden md:flex gap-4 lg:gap-10 items-center">
+        <Link
+          href="#"
+          className={`transition-all duration-300 hover:scale-110 ${
+            isScrolled
+              ? 'text-softWhite hover:text-secondary'
+              : 'text-primary hover:text-secondary'
+          }`}
+        >
           Serviços
         </Link>
-        <Link href="#" className="text-softWhite hover:text-secondary">
+        <Link
+          href="#"
+          className={`transition-all duration-300 hover:scale-110 ${
+            isScrolled
+              ? 'text-softWhite hover:text-secondary'
+              : 'text-primary hover:text-secondary'
+          }`}
+        >
           Formação
         </Link>
 
-        <Button asChild className="text-softWhite bg-secondary">
+        <Button
+          asChild
+          variant={'outline'}
+          className={`transition-all duration-300 hover:scale-110 ${
+            isScrolled
+              ? 'text-primary bg-softWhite hover:bg-primary hover:text-softWhite'
+              : 'text-softWhite bg-primary hover:bg-softWhite hover:text-primary hover:border-1 hover:border-primary'
+          }`}
+        >
           <Link href="https://wa.me/" target="_blank">
             Agende Sua Consulta
           </Link>
@@ -45,7 +91,11 @@ export default function Header() {
         <Sheet>
           <SheetTrigger asChild>
             <button className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
-              <Menu className="w-6 h-6" />
+              <Menu
+                className={`w-6 h-6 transition-all duration-300 hover:scale-110 ${
+                  isScrolled ? 'text-primary' : 'text-softWhite'
+                }`}
+              />
             </button>
           </SheetTrigger>
           <SheetContent side="left" className="p-4">
@@ -53,7 +103,7 @@ export default function Header() {
               <SheetClose asChild>
                 <Link
                   href="#servicos"
-                  className="text-lg text-gray-700 hover:text-blue-600"
+                  className="text-lg text-gray-700 hover:text-blue-600 hover:scale-105 transition-transform duration-300"
                 >
                   Serviços
                 </Link>
@@ -61,7 +111,7 @@ export default function Header() {
               <SheetClose asChild>
                 <Link
                   href="#formacao"
-                  className="text-lg text-gray-700 hover:text-blue-600"
+                  className="text-lg text-gray-700 hover:text-blue-600 hover:scale-105 transition-transform duration-300"
                 >
                   Formação
                 </Link>
@@ -69,7 +119,7 @@ export default function Header() {
               <SheetClose asChild>
                 <Link
                   href="https://wa.me/5599999999999"
-                  className="block bg-blue-600 text-white text-center px-4 py-2 rounded hover:bg-blue-700 transition"
+                  className="block bg-blue-600 text-softWhite text-center px-4 py-2 rounded hover:bg-blue-700 hover:scale-105 transition-all duration-300"
                 >
                   Agende sua consulta
                 </Link>

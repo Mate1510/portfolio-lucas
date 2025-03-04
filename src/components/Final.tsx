@@ -7,27 +7,16 @@ import {
   CardTitle,
 } from './ui/card';
 import Image from 'next/image';
+import Localizacao from './Localizacao';
 
 export default function Final() {
   return (
     <section className="w-4/6 flex flex-wrap justify-between py-10">
-      <Card className="w-1/2 bg-primary p-8">
-        <CardHeader>
-          <CardTitle>Depoimentos</CardTitle>
-        </CardHeader>
+      <div className="lg:w-[60%] w-full bg-primary px-6 rounded-lg">
+        <Localizacao />
+      </div>
 
-        <CardContent>
-          <div className="flex justify-around">
-            <ChevronLeft size={50} />
-
-            <div className="w-11/12 h-full bg-white"></div>
-
-            <ChevronRight size={50} />
-          </div>
-        </CardContent>
-      </Card>
-
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-20">
         <Card className="relative w-[360px] h-[150px] border-primary border-2 p-2">
           <CardHeader className="w-3/4">
             <CardTitle className="leading-8">Agende Seu Horário</CardTitle>
@@ -40,7 +29,7 @@ export default function Final() {
           </CardFooter>
         </Card>
 
-        <Card className="flex flex-col relative w-[360px] h-[250px] bg-primary border-black border-2 p-2 text-white">
+        <Card className="flex flex-col relative w-[360px] h-[250px] bg-primary border-black border-2 p-2 text-softWhite">
           <CardHeader className="flex flex-row gap-6">
             <Image src="/LogoHeader.svg" alt="Logo" width={80} height={80} />
             <CardTitle className="leading-10">Bem Estar é Movimentar</CardTitle>

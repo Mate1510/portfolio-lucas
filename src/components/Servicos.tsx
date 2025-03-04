@@ -9,11 +9,11 @@ import {
 
 export default function Servicos() {
   return (
-    <section className="flex flex-col items-center bg-primary w-full py-8 p-24">
-      <h2 className="text-4xl text-white font-bold my-6">Serviços</h2>
+    <section className="flex flex-col items-center bg-primary w-full py-6 lg:px-24">
+      <h2 className="text-4xl text-softWhite font-bold my-6">Serviços</h2>
 
       <div className="flex flex-wrap gap-4 items-stretch justify-center">
-        <Card className="flex flex-col w-[360px]  bg-primary text-white">
+        <Card className="flex flex-col w-[290px]  bg-primary text-softWhite transition-all duration-300 hover:scale-110 hover:m-2">
           <CardHeader className="flex flex-row gap-4 items-center">
             <Image
               src="/Fisio.png"
@@ -35,7 +35,7 @@ export default function Servicos() {
           </CardFooter>
         </Card>
 
-        <Card className="flex flex-col w-[360px] bg-primary text-white">
+        <Card className="flex flex-col w-[290px] bg-primary text-softWhite transition-all duration-300 hover:scale-110 hover:m-2">
           <CardHeader className="flex flex-row gap-4 items-center">
             <Image
               src="/Run.png"
@@ -59,7 +59,7 @@ export default function Servicos() {
           </CardFooter>
         </Card>
 
-        <Card className="flex flex-col w-[360px] bg-primary text-white">
+        <Card className="flex flex-col w-[290px] bg-primary text-softWhite transition-all duration-300 hover:scale-110 hover:m-2">
           <CardHeader className="flex flex-row gap-4 items-center">
             <Image
               src="/DorLombar.png"
@@ -81,7 +81,7 @@ export default function Servicos() {
           </CardFooter>
         </Card>
 
-        <Card className="flex flex-col w-[360px] bg-primary text-white">
+        <Card className="flex flex-col w-[290px] bg-primary text-softWhite transition-all duration-300 hover:scale-110 hover:m-2">
           <CardHeader className="flex flex-row gap-4 items-center">
             <Image
               src="/Fisio.png"
@@ -104,9 +104,8 @@ export default function Servicos() {
         </Card>
       </div>
 
-      <div className="text-white text-xl text-center mt-10 mb-2">
+      <div className="text-softWhite text-xl text-center mt-10 mb-2 px-6">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
-        Aliquam in hendrerit urna.
       </div>
     </section>
   );
