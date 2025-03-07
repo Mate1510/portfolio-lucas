@@ -61,7 +61,7 @@ export default function Inicio() {
             src="/FotoPrincipal.png"
             alt="Lucas Abreu"
             fill
-            className="object-cover"
+            className="object-cover select-none pointer-events-none"
           />
         </div>
       </div>
