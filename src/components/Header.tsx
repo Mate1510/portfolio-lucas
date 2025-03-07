@@ -80,7 +80,10 @@ export default function Header() {
               : 'text-softWhite bg-primary hover:bg-softWhite hover:text-primary hover:border-1 hover:border-primary'
           }`}
         >
-          <Link href="https://wa.me/" target="_blank">
+          <Link
+            href="https://wa.me/556499553122?text=Tenho%20interesse%20em%20marcar%20uma%20consulta"
+            target="_blank"
+          >
             Agende Sua Consulta
           </Link>
         </Button>
