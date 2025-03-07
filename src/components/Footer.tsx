@@ -17,19 +17,19 @@ export default function Footer() {
 
         <Separator orientation="vertical" className="mx-8 w-[2px]" />
 
-        <div className="flex flex-row gap-6">
+        <div className="flex flex-row gap-4">
           <Image
             src="/Instagram.svg"
             alt="Logo Lucas Abreu"
-            width={25}
-            height={25}
+            width={30}
+            height={30}
             className="brightness-0 invert transition-all duration-300 hover:scale-125"
           />
           <Image
             src="/WhatsApp.svg"
             alt="Logo Lucas Abreu"
-            width={25}
-            height={25}
+            width={30}
+            height={30}
             className="brightness-0 invert transition-all duration-300 hover:scale-125"
           />
         </div>

@@ -26,21 +26,21 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 left-0 right-0 z-50 flex items-center justify-between px-8 lg:px-24 py-2 transition-transform duration-300 ${
+      className={`sticky h-[80px] top-0 left-0 right-0 z-50 flex items-center justify-between px-8 lg:px-24 py-2 shadow-md transition-transform duration-300 ${
         isScrolled ? 'bg-primary' : 'bg-softWhite'
       }`}
     >
-      <div className="flex items-center gap-2 transition-transform duration-300 hover:scale-110">
+      <div className="flex items-center gap-2 transition-transform duration-300 hover:scale-105">
         <div>
           <Image
             src={`${isScrolled ? '/LogoHeader.svg' : '/LogoEscura.svg'}`}
             alt="Logo Lucas Abreu"
-            width={100}
-            height={100}
+            width={80}
+            height={80}
           />
         </div>
         <h1
-          className={`font-bold text-xl sm:text-2xl pl-4 ${
+          className={`font-bold text-xl sm:text-2xl ${
             isScrolled ? 'text-softWhite' : 'text-primary'
           }`}
         >
@@ -51,7 +51,7 @@ export default function Header() {
       {/* Navegação Desktop */}
       <nav className="hidden md:flex gap-4 lg:gap-10 items-center">
         <Link
-          href="#"
+          href="#servicos"
           className={`transition-all duration-300 hover:scale-110 ${
             isScrolled
               ? 'text-softWhite hover:text-secondary'
@@ -61,7 +61,7 @@ export default function Header() {
           Serviços
         </Link>
         <Link
-          href="#"
+          href="#formacao"
           className={`transition-all duration-300 hover:scale-110 ${
             isScrolled
               ? 'text-softWhite hover:text-secondary'

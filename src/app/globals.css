@@ -80,6 +80,8 @@
 @layer base {
   * {
     @apply border-border;
+    scroll-behavior: smooth;
+    scroll-padding-top: 78px;
   }
   body {
     @apply bg-background text-foreground;

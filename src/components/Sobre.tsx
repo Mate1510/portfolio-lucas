@@ -7,14 +7,15 @@ import {
   CardHeader,
   CardTitle,
 } from './ui/card';
+import { Badge } from './ui/badge';
 
 export default function Sobre() {
   return (
-    <section className="relative">
+    <section className="relative" id='formacao'>
       <Card className="w-4/6 mx-auto my-10 border-primary bg-transparent p-8">
         <CardHeader>
           <CardTitle>Conheça Lucas Abreu</CardTitle>
-          <CardDescription>Crefito-1234</CardDescription>
+          <Badge variant='outline' className='bg-primary text-softWhite w-fit'>Crefito-1234</Badge>
         </CardHeader>
 
         <CardContent className="w-11/12 text-justify text-lg">
