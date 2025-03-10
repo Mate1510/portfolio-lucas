@@ -13,7 +13,7 @@ export default function Servicos() {
       <h2 className="text-4xl text-softWhite font-bold my-6">Serviços</h2>
 
       <div className="flex flex-wrap gap-4 items-stretch justify-center">
-        {/* <Card className="flex flex-col w-[290px]  bg-primary text-softWhite transition-all duration-300 hover:scale-110 hover:m-2">
+        {/* <Card className="flex flex-col w-[290px]  bg-primary text-softWhite transition-all duration-300 hover:scale-110">
           <CardHeader className="flex flex-row gap-4 items-center">
             <Image
               src="/Fisio.png"
@@ -35,7 +35,7 @@ export default function Servicos() {
           </CardFooter>
         </Card> */}
 
-        <Card className="flex flex-col max-w-[400px] mx-6 bg-primary text-softWhite transition-all duration-300 hover:scale-110 hover:m-2">
+        <Card className="flex flex-col max-w-[350px] bg-primary text-softWhite transition-all duration-300 hover:scale-105 md:hover:scale-110 hover:m-2">
           <CardHeader className="flex flex-row gap-4 items-center">
             <Image
               src="/Run.png"
@@ -57,7 +57,7 @@ export default function Servicos() {
           </CardFooter>
         </Card>
 
-        <Card className="flex flex-col max-w-[400px] mx-6 bg-primary text-softWhite transition-all duration-300 hover:scale-110 hover:m-2">
+        <Card className="flex flex-col max-w-[350px] bg-primary text-softWhite transition-all duration-300 hover:scale-105 md:hover:scale-110 hover:m-2">
           <CardHeader className="flex flex-row gap-4 items-center">
             <Image
               src="/DorLombar.png"
@@ -77,7 +77,7 @@ export default function Servicos() {
           <CardFooter className="mt-auto font-bold">Alivie sua dor</CardFooter>
         </Card>
 
-        <Card className="flex flex-col max-w-[400px] mx-6 bg-primary text-softWhite transition-all duration-300 hover:scale-110 hover:m-2">
+        <Card className="flex flex-col max-w-[350px] min-h-[300px] bg-primary text-softWhite transition-all duration-300 hover:scale-105 md:hover:scale-110 hover:m-2">
           <CardHeader className="flex flex-row gap-4 items-center">
             <Image
               src="/Fisio.png"

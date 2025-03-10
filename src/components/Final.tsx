@@ -82,7 +82,7 @@ export default function Final() {
           </CarouselContent>
         </Carousel>
 
-        <Card className="flex flex-col  bg-primary border-black border-2 p-2 text-softWhite transition-transform duration-300 hover:scale-105">
+        <Card className="flex flex-col bg-primary border-black border-2 p-2 text-softWhite transition-transform duration-300 hover:scale-105">
           <CardHeader className="flex flex-row lg:gap-6 gap-4 items-center justify-center">
             <Image
               src="/LogoHeader.svg"
@@ -91,7 +91,7 @@ export default function Final() {
               height={80}
               className="transition-transform duration-300 hover:scale-110 md:h-[80px] md:w-[80px] h-[60px] w-[60px]"
             />
-            <CardTitle className="leading-10 md:text-2xl text-lg">
+            <CardTitle className="w-1/2 sm:w-auto md:text-2xl text-xl">
               Bem Estar É Movimentar
             </CardTitle>
           </CardHeader>
