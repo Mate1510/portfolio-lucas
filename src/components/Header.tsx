@@ -1,15 +1,40 @@
+'use client';
+
 import Link from 'next/link';
 import {
   Sheet,
   SheetTrigger,
   SheetContent,
   SheetClose,
+  SheetFooter,
 } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from './ui/button';
+import { useEffect, useState } from 'react';
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Função para lidar com cliques em links de âncora
+  const handleAnchorClick = (e: any, targetId: any) => {
+    e.preventDefault();
+
+    // Fecha o sheet primeiro
+    setIsOpen(false);
+
+    // Pequeno atraso para garantir que o sheet feche antes do scroll
+    setTimeout(() => {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Fallback para o método href normal se o elemento não for encontrado
+        window.location.href = `#${targetId}`;
+      }
+    }, 100);
+  };
+
   return (
     <header className="sticky h-[80px] top-0 left-0 right-0 z-50 flex items-center justify-between px-8 lg:px-24 py-2 shadow-md transition-transform duration-300 bg-primary">
       <div className="flex flex-row items-center gap-1 lg:gap-2 transition-transform duration-300 hover:scale-105">
@@ -67,58 +92,58 @@ export default function Header() {
 
       {/* Menu Mobile com Sheet */}
       <div className="md:hidden">
-        <Sheet>
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <button className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
               <Menu className="w-7 h-7 transition-all duration-300 hover:scale-110 text-softWhite" />
             </button>
           </SheetTrigger>
+
           <SheetContent side="right" className="p-8 py-14 h-full">
             <div className="flex flex-col justify-between h-full">
-              <div className="flex flex-col space-y-4 text-lg text-primary font-bold">
-                <SheetClose asChild>
-                  <Link
-                    href="#servicos"
-                    className="transition-all duration-300 hover:scale-110 hover:text-secondary"
-                  >
-                    Serviços
-                  </Link>
-                </SheetClose>
-
-                <SheetClose asChild>
-                  <Link
-                    href="#sobremim"
-                    className="transition-all duration-300 hover:scale-110 hover:text-secondary"
-                  >
-                    Sobre mim
-                  </Link>
-                </SheetClose>
-
-                <SheetClose asChild>
-                  <Link
-                    href="#studio"
-                    className="transition-all duration-300 hover:scale-110 hover:text-secondary"
-                  >
-                    Studio L2
-                  </Link>
-                </SheetClose>
-              </div>
-
-              <SheetClose asChild>
-                <Button
-                  asChild
-                  className="transition-all duration-300 hover:scale-110 text-softWhite border-2 border-primary
-                  bg-primary hover:border-2 hover:border-primary hover:text-primary hover:bg-softWhite hover:mx-2
-                  text-sm p-2 mt-auto"
+              <nav className="flex flex-col space-y-4 text-lg text-primary font-bold">
+                <a
+                  href="#servicos"
+                  className="transition-all duration-300 hover:scale-110 hover:text-secondary"
+                  onClick={(e) => handleAnchorClick(e, 'servicos')}
                 >
-                  <Link
-                    href="https://wa.me/556499553122?text=Tenho%20interesse%20em%20marcar%20uma%20consulta"
-                    target="_blank"
+                  Serviços
+                </a>
+
+                <a
+                  href="#sobremim"
+                  className="transition-all duration-300 hover:scale-110 hover:text-secondary"
+                  onClick={(e) => handleAnchorClick(e, 'sobremim')}
+                >
+                  Sobre mim
+                </a>
+
+                <a
+                  href="#studio"
+                  className="transition-all duration-300 hover:scale-110 hover:text-secondary"
+                  onClick={(e) => handleAnchorClick(e, 'studio')}
+                >
+                  Studio L2
+                </a>
+              </nav>
+
+              <SheetFooter>
+                <SheetClose asChild>
+                  <Button
+                    asChild
+                    className="transition-all duration-300 hover:scale-110 text-softWhite border-2 border-primary
+                    bg-primary hover:border-2 hover:border-primary hover:text-primary hover:bg-softWhite hover:mx-2
+                    text-sm p-2 mt-auto"
                   >
-                    Agende Sua Consulta
-                  </Link>
-                </Button>
-              </SheetClose>
+                    <Link
+                      href="https://wa.me/556499553122?text=Tenho%20interesse%20em%20marcar%20uma%20consulta"
+                      target="_blank"
+                    >
+                      Agende Sua Consulta
+                    </Link>
+                  </Button>
+                </SheetClose>
+              </SheetFooter>
             </div>
           </SheetContent>
         </Sheet>
