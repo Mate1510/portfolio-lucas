@@ -12,7 +12,7 @@ export default function Servicos() {
     <section className="flex flex-col items-center bg-primary w-full py-6 lg:px-24">
       <h2 className="text-4xl text-softWhite font-bold my-6">Serviços</h2>
 
-      <div className="flex flex-wrap gap-4 items-stretch justify-center">
+      <div className="flex flex-wrap gap-4 lg:gap-10 items-stretch justify-center">
         {/* <Card className="flex flex-col w-[290px]  bg-primary text-softWhite transition-all duration-300 hover:scale-110">
           <CardHeader className="flex flex-row gap-4 items-center">
             <Image
