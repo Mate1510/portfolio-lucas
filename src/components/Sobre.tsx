@@ -11,7 +11,7 @@ import { Badge } from './ui/badge';
 
 export default function Sobre() {
   return (
-    <section className="relative" id="formacao">
+    <section className="relative" id="sobremim">
       <Card className="lg:w-4/6 w-5/6 mx-auto my-10 border-primary bg-transparent lg:p-2">
         <CardHeader>
           <Image

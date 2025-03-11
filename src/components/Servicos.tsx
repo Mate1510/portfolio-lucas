@@ -9,7 +9,10 @@ import {
 
 export default function Servicos() {
   return (
-    <section className="flex flex-col items-center bg-primary w-full py-6 lg:px-24">
+    <section
+      className="flex flex-col items-center bg-primary w-full py-6 lg:px-24"
+      id="servicos"
+    >
       <h2 className="text-4xl text-softWhite font-bold my-6">Serviços</h2>
 
       <div className="flex flex-wrap gap-4 lg:gap-10 items-stretch justify-center">
