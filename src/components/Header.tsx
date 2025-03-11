@@ -17,22 +17,48 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   // Função para lidar com cliques em links de âncora
-  const handleAnchorClick = (e: any, targetId: any) => {
+  const handleAnchorClick = (e: React.MouseEvent, targetId: string) => {
     e.preventDefault();
+
+    // Armazena a posição atual de scroll antes de fechar o sheet
+    const currentScrollPos = window.scrollY;
 
     // Fecha o sheet primeiro
     setIsOpen(false);
 
-    // Pequeno atraso para garantir que o sheet feche antes do scroll
+    // Garante que a posição de scroll não mude imediatamente após fechar o sheet
+    const maintainPosition = () => {
+      window.scrollTo(0, currentScrollPos);
+    };
+
+    // Aplica manutenção de posição várias vezes durante o fechamento do sheet
+    const intervalId = setInterval(maintainPosition, 10);
+
+    // Depois de um delay suficiente, limpa o intervalo e faz o scroll para o destino
     setTimeout(() => {
-      const element = document.getElementById(targetId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+      clearInterval(intervalId);
+
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        // Calcula a posição do elemento alvo com compensação para o header
+        const headerHeight = 80; // Altura do header em pixels
+        const elementPosition =
+          targetElement.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerHeight;
+
+        // Adiciona um pequeno delay antes de iniciar o scroll suave
+        setTimeout(() => {
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth',
+          });
+        }, 50);
       } else {
-        // Fallback para o método href normal se o elemento não for encontrado
+        // Fallback se o elemento não for encontrado
         window.location.href = `#${targetId}`;
       }
-    }, 100);
+    }, 400);
   };
 
   return (
