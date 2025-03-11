@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import {
   Card,
   CardContent,
@@ -12,19 +12,16 @@ import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 import Localizacao from './Localizacao';
 import { Badge } from './ui/badge';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from './ui/carousel';
+import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
 import Fade from 'embla-carousel-fade';
 import Link from 'next/link';
 
-export default function Final() {
+export default function Studio() {
   return (
-    <section className="lg:w-4/6 w-5/6 flex flex-wrap justify-between items-center pb-10">
+    <section
+      className="lg:w-4/6 w-5/6 flex flex-wrap justify-between items-center py-10"
+      id="studio"
+    >
       <div className="lg:w-[60%] h-fit w-full bg-primary lg:px-6 md:px-2 px-0 rounded-lg shadow-2xl">
         <Localizacao />
       </div>

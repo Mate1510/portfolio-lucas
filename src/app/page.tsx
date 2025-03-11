@@ -1,4 +1,4 @@
-import Final from '@/components/Final';
+import Studio from '@/components/Studio';
 import Footer from '@/components/Footer';
 import HomeSection from '@/components/HomeSection';
 import PopUpWhatsApp from '@/components/PopUpWhatsApp';
@@ -11,7 +11,7 @@ export default function Home() {
       <HomeSection />
       <Servicos />
       <Sobre />
-      <Final />
+      <Studio />
       <Footer />
       <PopUpWhatsApp />
     </main>
