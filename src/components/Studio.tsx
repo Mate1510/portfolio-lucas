@@ -19,7 +19,7 @@ import Link from 'next/link';
 export default function Studio() {
   return (
     <section
-      className="lg:w-4/6 w-5/6 flex flex-wrap justify-between items-center py-10"
+      className="lg:w-4/6 w-5/6 flex flex-wrap justify-between items-stretch py-10"
       id="studio"
     >
       <div className="lg:w-[60%] h-fit w-full bg-primary lg:px-6 md:px-2 px-0 rounded-lg shadow-2xl">
@@ -28,15 +28,15 @@ export default function Studio() {
 
       <div className="lg:w-2/6 w-full flex flex-col gap-4 justify-between  lg:p-0 pt-10">
         <Card className="relative border-primary border-2 p-2 transition-transform duration-300 hover:scale-105">
-          <CardHeader className="flex flex-col lg:w-[200px] md:w-full w-[200px]">
+          <CardHeader className="flex flex-col lg:w-[240px] md:w-full w-[200px]">
             <Badge
               variant="outline"
               className="bg-primary text-softWhite md:text-xs text-[10px] w-fit"
             >
               Presencial ou On-line
             </Badge>
-            <CardTitle className="leading-8 md:text-2xl text-xl">
-              Agende Seu Horário
+            <CardTitle className="leading-8 md:text-xl text-lg">
+              Reserve seu horário com um clique
             </CardTitle>
           </CardHeader>
 

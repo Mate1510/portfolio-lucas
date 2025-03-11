@@ -22,9 +22,11 @@ export default function Sobre() {
             className="sm:hidden z-40 rounded-sm border-primary border-2 self-center mb-4"
           />
 
-          <CardTitle>Conheça Lucas Abreu</CardTitle>
+          <CardTitle>
+            Conheça o profissional que vai te ajudar a viver com menos dor
+          </CardTitle>
           <Badge variant="outline" className="bg-primary text-softWhite w-fit">
-            CREFITO 249413 F
+            Fisioterapeuta • CREFITO 249413-F
           </Badge>
         </CardHeader>
 
@@ -39,15 +41,21 @@ export default function Sobre() {
 
           <div>
             Olá, sou Lucas Abreu, fisioterapeuta com 9 anos de experiência e
-            especialista no tratamento da dor. Atendo pacientes com dor crônica
-            e corredores, unindo conhecimento técnico com uma abordagem humana e
-            individualizada. Como corredor, entendo na prática os desafios do
-            movimento e acredito que, com o cuidado certo, é possível viver com
-            mais autonomia, qualidade de vida e menos dor.
+            especialista no tratamento da dor. Minha missão é ajudar pessoas a
+            se moverem com mais liberdade, autonomia e bem-estar.
+            <br />
+            Ao longo da minha trajetória, atendi centenas de pacientes com dor
+            crônica, lesões musculoesqueléticas e corredores amadores e
+            profissionais. Como corredor, entendo na prática os desafios do
+            movimento — e é por isso que trago uma abordagem técnica, empática e
+            personalizada para cada caso.
+            <br />
+            Acredito que, com o cuidado certo, você pode viver com mais
+            qualidade de vida e menos dor — seja no consultório ou à distância.
           </div>
 
           <div className="flex flex-col mt-6">
-            <span className="font-bold">Minha Formação:</span>
+            <span className="font-bold">Formação e Especializações:</span>
             <ul className="list-disc pl-5 flex flex-col flex-wrap">
               <li>
                 Bacharel em Fisioterapia - Universidade de Rio Verde (UniRV)
@@ -61,11 +69,13 @@ export default function Sobre() {
         </CardContent>
 
         <CardFooter className="lg:w-5/6 w-full flex">
-          Atendo pacientes com dor crônica, casos ortopédicos e corredores
+          Atendimento especializado em dor crônica, reabilitação ortopédica e
+          biomecânica da corrida.
           <br />
-          Em clínica própria, presencial e online
+          Presencial na clínica própria ou on-line — com acolhimento, escuta e
+          tratamento individualizado.
           <br />
-          Desde 2016
+          Desde 2016 cuidando de quem busca mais saúde e movimento.
         </CardFooter>
       </Card>
     </section>

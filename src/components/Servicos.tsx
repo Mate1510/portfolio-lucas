@@ -10,10 +10,12 @@ import {
 export default function Servicos() {
   return (
     <section
-      className="flex flex-col items-center bg-primary w-full py-6 lg:px-24"
+      className="flex flex-col items-center justify-center bg-primary w-full py-6 lg:px-24"
       id="servicos"
     >
-      <h2 className="text-4xl text-softWhite font-bold my-6">Serviços</h2>
+      <h2 className="text-4xl text-softWhite font-bold my-6 w-fit text-center">
+        Cuidado personalizado para sua saúde e performance
+      </h2>
 
       <div className="flex flex-wrap gap-4 lg:gap-10 items-stretch justify-center">
         {/* <Card className="flex flex-col w-[290px]  bg-primary text-softWhite transition-all duration-300 hover:scale-110">
@@ -46,17 +48,17 @@ export default function Servicos() {
               width={50}
               height={50}
             />
-            <CardTitle>Avaliação da Corrida</CardTitle>
+            <CardTitle>Avaliação Biomecânica da Corrida</CardTitle>
           </CardHeader>
 
           <CardContent className="flex-grow">
-            A maneira mais eficiente de alcançar seus objetivos na corrida de
-            forma saudável. Pode ser realizada de forma presencial ou on-line
-            (de qualquer lugar do Brasil e do mundo)
+            Identifique e corrija padrões de movimento que podem causar lesões e
+            limitar sua performance. Atendimento presencial ou on-line — de
+            qualquer lugar do Brasil e do mundo.
           </CardContent>
 
           <CardFooter className="mt-auto font-bold">
-            Melhore seu desempenho na corrida
+            Corra melhor, com mais segurança
           </CardFooter>
         </Card>
 
@@ -68,16 +70,18 @@ export default function Servicos() {
               width={50}
               height={50}
             />
-            <CardTitle>Tratamento da Dor</CardTitle>
+            <CardTitle>Tratamento Personalizado da Dor</CardTitle>
           </CardHeader>
 
           <CardContent className="flex-grow">
-            Tratamento fisioterapêutico para disfunções musculoesqueléticas e
-            dores crônicas. Atendimento totalmente individualizado e
-            personalizado
+            Alívio e tratamento eficaz para dores musculares e articulares.
+            Protocolos baseados em evidência, adaptados à sua rotina e
+            necessidades.
           </CardContent>
 
-          <CardFooter className="mt-auto font-bold">Alivie sua dor</CardFooter>
+          <CardFooter className="mt-auto font-bold">
+            Recupere sua qualidade de vida
+          </CardFooter>
         </Card>
 
         <Card className="flex flex-col max-w-[350px] min-h-[300px] bg-primary text-softWhite transition-all duration-300 hover:scale-105 md:hover:scale-110 hover:m-2">
@@ -88,22 +92,24 @@ export default function Servicos() {
               width={50}
               height={50}
             />
-            <CardTitle>Recovery</CardTitle>
+            <CardTitle>Fisioterapia Recovery</CardTitle>
           </CardHeader>
 
           <CardContent className="flex-grow">
-            Técnicas pré e pós prova baseadas em evidência, para acelerar sua
-            recuperação e aliviar dores musculares
+            Técnicas avançadas para recuperação muscular, pré e pós-treino ou
+            prova. Ideal para atletas e praticantes de atividade física que
+            querem manter a performance com menos dor.
           </CardContent>
 
           <CardFooter className="mt-auto font-bold">
-            Acelere sua recuperação
+            Recupere mais rápido, treine melhor
           </CardFooter>
         </Card>
       </div>
 
       <div className="text-softWhite text-xl text-center mt-10 mb-2 px-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
+        Escolha o cuidado que você merece e dê o próximo passo rumo ao
+        bem-estar.
       </div>
     </section>
   );
