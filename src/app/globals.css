@@ -79,18 +79,29 @@
 
 @layer base {
   * {
-    @apply border-border;
-    scroll-behavior: smooth;
+    @apply border-border scroll-smooth;
+  }
+
+  html {
     scroll-padding-top: 78px;
   }
+
+  @media (max-width: 1023px) {
+    html {
+      scroll-padding-top: 64px;
+    }
+  }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
+
+/*
 .clip-triangle {
   clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
-}
+} */
 
 @keyframes customPulse {
   0% {
