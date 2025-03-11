@@ -11,7 +11,7 @@ export default function HomeSection() {
         Agende sua consulta e comece a mudança hoje
       </div>
 
-      <div className="relative h-[calc(100svh-240px)] w-full bg-primary rounded-lg mt-4 z-40 transition-all duration-300 hover:scale-105 hover:mt-6">
+      <div className="relative h-[calc(100lvh-240px)] w-full bg-primary rounded-lg mt-4 z-40 transition-all duration-300 hover:scale-105 hover:mt-6">
         <Badge className="absolute top-4 left-4 z-50 text-secondary bg-softWhite text-sm sm:text-base md:text-lg hover:bg-softWhite">
           Atendimento Presencial ou Online
         </Badge>
