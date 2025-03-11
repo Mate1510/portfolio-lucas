@@ -4,8 +4,8 @@ import Link from 'next/link';
 export default function PopUpWhatsApp() {
   return (
     <div
-      className="lg:w-[75px] lg:h-[75px] md:w-[60px] md:h-[60px] w-[40px] h-[40px] fixed md:bottom-6 md:right-8 md:left-auto
-    bottom-2 left-4 z-50 flex items-center justify-center bg-primary border-2 border-softWhite rounded-full
+      className="lg:w-[75px] lg:h-[75px] md:w-[60px] md:h-[60px] w-[40px] h-[40px] fixed md:bottom-6 md:right-8
+    bottom-4 right-4 z-50 flex items-center justify-center bg-primary border-2 border-softWhite rounded-full
     animate-customPulse"
     >
       <Link

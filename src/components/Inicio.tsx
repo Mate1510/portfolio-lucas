@@ -4,7 +4,7 @@ import { Separator } from './ui/separator';
 
 export default function Inicio() {
   return (
-    <section className="lg:flex hidden relative w-full lg:h-[calc(100dvh-80px)] md:h-[calc(100dvh-180px)] h-[calc(100dvh-200px)] bg-softWhite">
+    <section className="lg:fle hidden relative w-full lg:h-[calc(100dvh-80px)] md:h-[calc(100dvh-180px)] h-[calc(100dvh-200px)] bg-softWhite">
       {/* Overlay azul */}
       <div className="absolute z-10 inset-0 bg-primary opacity-30 lg:hidden" />
       {/* Overlay azul */}
